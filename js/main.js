@@ -4,10 +4,11 @@ window.onload = function(){
     game.fps = 100;
     game.preload("imgs/ball.png","imgs/ball-red.png","imgs/bar.png");
 
-    // ボールが進む方向(初期値は右下)
+    // ボール1 が進む方向とスピード設定(初期値は右下)
     var dX1 = 2;
     var dY1 = 2;
 
+    // ボール2 が進む方向とスピード設定(初期値は左下)
     var dX2 = -3;
     var dY2 = 3;
 
@@ -36,12 +37,10 @@ window.onload = function(){
         bar.image = game.assets["imgs/bar.png"];
         bar.x = 150;
         bar.y = 300;
-
         game.rootScene.addChild(bar);
 
 
         game.addEventListener("enterframe", function(){
-
             // -------------------
             // Hit test : bar and ball
             // -------------------
@@ -51,7 +50,6 @@ window.onload = function(){
             // -------------------
             // ball controll
             // -------------------
-
             // 壁に当たったら反転
             if( ball1.x<0 || ball1.x>(320-10) ){ dX1 = dX1*-1; }
             if( ball1.y<0 || ball1.y>(320-10) ){ dY1 = dY1*-1; }
