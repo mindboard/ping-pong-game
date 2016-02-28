@@ -2,7 +2,7 @@ enchant();
 window.onload = function(){
     var game = new Game(320, 320);
     game.fps = 100;
-    game.preload("ball.png","ball-red.png","bar.png");
+    game.preload("imgs/ball.png","imgs/ball-red.png","imgs/bar.png");
 
     // ボールが進む方向(初期値は右下)
     var dX1 = 2;
@@ -17,13 +17,13 @@ window.onload = function(){
         // ball
         // ------------
         var ball1 = new Sprite(10, 10);
-        ball1.image = game.assets["ball.png"];
+        ball1.image = game.assets["imgs/ball.png"];
         ball1.x = 150;
         ball1.y = 100;
         game.rootScene.addChild(ball1);
 
         var ball2 = new Sprite(10, 10);
-        ball2.image = game.assets["ball-red.png"];
+        ball2.image = game.assets["imgs/ball-red.png"];
         ball2.x = 150;
         ball2.y = 50;
         game.rootScene.addChild(ball2);
@@ -33,7 +33,7 @@ window.onload = function(){
         // bar
         // ------------
         var bar = new Sprite(60, 10);
-        bar.image = game.assets["bar.png"];
+        bar.image = game.assets["imgs/bar.png"];
         bar.x = 150;
         bar.y = 300;
 
